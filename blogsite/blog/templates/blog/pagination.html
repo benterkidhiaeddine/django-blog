@@ -1,6 +1,6 @@
 {% load paginator_tags %}
 {% get_proper_elided_page_range page.paginator page.number as page_range %}
-<div class="pagination">
+<ul class="pagination">
     <span class="step-links"></span>
     {% if page.has_previous %}
         <li class="page-item"><a class="page-link" href="?page={{ page.previous_page_number }}">Previous</a></li>
@@ -21,4 +21,4 @@
         <li class="page-item"><a class="page-link" href="?page={{ page.next_page_number }}">Next</a></li>
     {% endif %}
 
-</div>
+</ul>
