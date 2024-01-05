@@ -54,3 +54,5 @@ python manage.py runserver
 8.  Once that done make sure that inside setting.py , the SES region name and region endpoint match what is mentions in your amazon account SES
 
 Note: That this will not be usable in production as you can only send mail only to identities defined and verified inside the SES service
+For production access check the following link https://docs.aws.amazon.com/ses/latest/dg/request-production-access.html
+and on more documentation about the python package used to connect to Amazon SES check : https://github.com/django-ses/django-ses
