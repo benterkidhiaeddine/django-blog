@@ -45,7 +45,7 @@ python manage.py runserver
 ## A note about Amazone Simple Email service
 
 1.  To setup this service you need to first have an amazon account preferably logged in not as a Root User
-2.  Go to the verified identities under the Configuration Tab and click on create and identity
+2.  Go to the Amazon simple email service then verified identities under the Configuration Tab and click on create and identity
 3.  Select your identity type either domain or your email ( for simple development purposes) , add it and then click "Create identity"
 4.  Confirm your identity via clicking on a link that comes to your mail
 5.  Setup your SMTP credentials under "SMTP" setting tab and register the .csv that has your credentials it will contain your AWS_SES_KEY_ID and AWS_SES_SECRET_KEY
