@@ -1,0 +1,30 @@
+{% extends "blog/base.html" %}
+
+{%  block title %}
+Share post
+{% endblock title %}
+
+{% block content %}
+
+{% if sent %}
+    <p syle="color: green">Mail sent sucessfully</p>
+{% endif %}
+
+
+<form action="{{ post.get_share_absolute_url }}" method="post" novalidate>
+    {% csrf_token %}
+    {% for field in form  %}
+        <div>
+
+            {{ field.label_tag }}
+            {{ field }}
+            {{ field.errors}}
+        </div>
+    
+    {% endfor %}
+    <input type="submit" value="Submit">
+
+    
+</form>
+
+{% endblock content %}

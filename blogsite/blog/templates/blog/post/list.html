@@ -12,6 +12,9 @@
       Published {{ post.published }} by {{ post.author }}
     </p>
     {{ post.body|truncatewords:30|linebreaks }}
+
+    <p><a href="{{ post.get_share_absolute_url }}">Share post</a></p>
   {% endfor %}
+
     {% include "blog/pagination.html" with page=page_obj %}
 {% endblock content %}

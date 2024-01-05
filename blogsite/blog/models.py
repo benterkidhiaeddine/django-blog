@@ -64,3 +64,6 @@ class Post(models.Model):
                 self.slug,
             ],
         )
+
+    def get_share_absolute_url(self):
+        return reverse("blog:post_share", args=[self.pk])
